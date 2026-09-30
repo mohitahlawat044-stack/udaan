@@ -1,0 +1,1 @@
+import {ArrowUpRight} from 'lucide-react';import './ServiceCard.css';export default function ServiceCard({number,title,text}){return <article className="service-card"><span className="service-no">{number}</span><div><h3>{title}</h3><p>{text}</p></div><ArrowUpRight size={19}/></article>}

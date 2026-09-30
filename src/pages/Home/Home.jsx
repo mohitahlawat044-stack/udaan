@@ -1,0 +1,4 @@
+import './Home.css';
+import hero from '../../assets/images/hero-event.jpeg';import wedding from '../../assets/images/wedding-event.jpeg';import corporate from '../../assets/images/corporate-event.jpeg';import experience from '../../assets/images/experience-event.jpeg';
+import Hero from './sections/Hero';import AboutStrip from './sections/AboutStrip';import WhatWeCreate from './sections/WhatWeCreate';import Experiences from './sections/Experiences';import WhyUdaan from './sections/WhyUdaan';import Process from './sections/Process';import CTASection from '../../components/CTASection/CTASection';
+export default function Home(){return <div className="home"><Hero image={hero}/><AboutStrip image={experience}/><WhatWeCreate images={{wedding,corporate,experience,hero}}/><Experiences images={{wedding,corporate,experience,hero}}/><WhyUdaan/><Process/><CTASection image={hero} title={<>YOUR EVENT DESERVES<br/>THE UDAAN EXPERIENCE.</>}/></div>}

@@ -1,0 +1,1 @@
+.service-overview{background:#0b0b0b}.service-overview-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}.service-overview-grid>p{color:var(--gray);font-size:13px;max-width:530px}@media(max-width:750px){.service-overview-grid{grid-template-columns:1fr;gap:25px}}

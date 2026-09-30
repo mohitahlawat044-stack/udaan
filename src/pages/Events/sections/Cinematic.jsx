@@ -1,0 +1,1 @@
+import './Cinematic.css';export default function Cinematic({image}){return <section className="cinematic" style={{'--cin-image':`url("${image}")`}}><div/><div className="container"><span className="eyebrow">THE UDAAN ARCHIVE</span><h2 className="display">EVERY FRAME<br/><span>TELLS A STORY.</span></h2></div></section>}

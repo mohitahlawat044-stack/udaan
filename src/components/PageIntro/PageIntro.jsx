@@ -1,0 +1,1 @@
+import './PageIntro.css';export default function PageIntro({eyebrow='UDAAN EVENTS',title,image}){return <section className="page-intro" style={{'--intro-image':`url("${image}")`}}><div className="page-intro-overlay"/><div className="container page-intro-content"><span className="eyebrow">{eyebrow}</span><h1 className="display">{title}</h1></div></section>}

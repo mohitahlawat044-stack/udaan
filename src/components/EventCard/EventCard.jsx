@@ -1,0 +1,1 @@
+import {ArrowUpRight} from 'lucide-react';import './EventCard.css';export default function EventCard({image,title,text}){return <article className="event-card"><img src={image} alt={title}/><div className="event-card-overlay"/><div className="event-card-content"><span>{title}</span><p>{text}</p><ArrowUpRight size={20}/></div></article>}
