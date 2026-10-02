@@ -1,1 +1,487 @@
-.about-strip{background:#0a0a0a}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.about-image{height:560px;overflow:hidden}.about-image img{width:100%;height:100%;object-fit:cover}.about-copy p{max-width:560px;color:var(--gray);margin:22px 0}.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0}.highlights div{border-top:1px solid rgba(201,162,77,.32);padding-top:14px}.highlights strong{display:block;color:var(--gold);font-size:10px;letter-spacing:.1em;margin-bottom:8px}.highlights span{font-size:11px;color:#ddd}.text-link{display:inline-flex;gap:9px;align-items:center;color:var(--gold-soft);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.text-link svg{transition:.3s}.text-link:hover svg{transform:translate(4px,-4px)}@media(max-width:850px){.about-grid{grid-template-columns:1fr;gap:40px}.about-image{height:430px}.highlights{margin-bottom:24px}}
+/* =========================================
+   ABOUT STRIP
+========================================= */
+
+.about-strip {
+  background: #f3eadb;
+  color: #161616;
+  padding: 75px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-image {
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-image::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(201, 162, 77, 0.45);
+  pointer-events: none;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.about-copy {
+  width: 100%;
+  max-width: 700px;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.about-eyebrow span {
+  width: 48px;
+  height: 2px;
+  background: #c9a24d;
+  display: block;
+  flex-shrink: 0;
+}
+
+.about-eyebrow p {
+  margin: 0;
+  color: #c59a3a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.about-copy h2 {
+  margin: 0;
+  color: #171717;
+  font-family: var(--display);
+  font-size: clamp(42px, 3.25vw, 54px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/*
+   First line should stay together on desktop
+*/
+.about-copy h2 br {
+  display: block;
+}
+
+.about-copy h2 em {
+  color: #c9a24d;
+  font-style: normal;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-description {
+  max-width: 680px;
+  margin: 25px 0 0;
+  color: #55504a;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   GOLD LINE
+========================================= */
+
+.about-line {
+  width: 80px;
+  height: 2px;
+  background: #c9a24d;
+  margin: 27px 0 25px;
+}
+
+
+/* =========================================
+   THREE HIGHLIGHTS
+========================================= */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-top: 1px solid rgba(105, 79, 33, 0.18);
+}
+
+.highlight-card {
+  min-height: 250px;
+  padding: 18px 22px 10px;
+  border-right: 1px solid rgba(105, 79, 33, 0.18);
+}
+
+.highlight-card:first-child {
+  padding-left: 0;
+}
+
+.highlight-card:last-child {
+  border-right: none;
+}
+
+
+/* NUMBER */
+
+.highlight-number {
+  display: block;
+  color: #bd8b2c;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+
+
+/* ICON */
+
+.highlight-icon {
+  width: 70px;
+  height: 70px;
+  border: 1px solid rgba(201, 162, 77, 0.45);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c49a38;
+  margin-bottom: 18px;
+}
+
+
+/* TITLE */
+
+.highlight-card h3 {
+  margin: 0;
+  color: #181818;
+  font-family: var(--display);
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+
+/* DESCRIPTION */
+
+.highlight-card p {
+  margin: 14px 0 0;
+  color: #777169;
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   DISCOVER BUTTON
+========================================= */
+
+.discover-link {
+  margin-top: 25px;
+  width: 350px;
+  min-height: 65px;
+  padding: 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: #d1a747;
+  color: #111;
+
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.discover-link svg {
+  transition: transform 0.3s ease;
+}
+
+.discover-link:hover {
+  background: #c39a3d;
+  transform: translateY(-2px);
+}
+
+.discover-link:hover svg {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .about-strip {
+    padding: 65px 0;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .about-image {
+    height: 500px;
+  }
+
+  .about-copy h2 {
+    font-size: 43px;
+  }
+
+  .about-description {
+    font-size: 13px;
+  }
+
+  .highlight-card {
+    padding: 16px 14px 10px;
+  }
+
+  .highlight-card h3 {
+    font-size: 19px;
+  }
+
+  .highlight-icon {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+  .about-strip {
+    padding: 60px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-image {
+    height: 450px;
+  }
+
+  .about-copy {
+    max-width: 100%;
+  }
+
+  .about-copy h2 {
+    font-size: 44px;
+  }
+
+  .about-description {
+    font-size: 14px;
+    max-width: 650px;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .highlight-card,
+  .highlight-card:first-child {
+    min-height: 230px;
+    padding: 18px 14px;
+  }
+
+  .highlight-card:first-child {
+    padding-left: 0;
+  }
+
+  .highlight-card h3 {
+    font-size: 19px;
+  }
+
+  .highlight-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .discover-link {
+    width: 330px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-strip {
+    padding: 50px 0;
+  }
+
+  .about-grid {
+    gap: 35px;
+  }
+
+  .about-image {
+    height: 360px;
+  }
+
+  .about-image::after {
+    inset: 8px;
+  }
+
+  .about-eyebrow {
+    gap: 12px;
+  }
+
+  .about-eyebrow span {
+    width: 35px;
+  }
+
+  .about-eyebrow p {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  /*
+     On mobile heading is allowed to wrap naturally
+  */
+  .about-copy h2 {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .about-description {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .about-line {
+    width: 60px;
+    margin: 22px 0;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card,
+  .highlight-card:first-child {
+    min-height: auto;
+    padding: 24px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(105, 79, 33, 0.18);
+  }
+
+  .highlight-card:last-child {
+    border-bottom: none;
+  }
+
+  .highlight-number {
+    margin-bottom: 15px;
+  }
+
+  .highlight-icon {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 18px;
+  }
+
+  .highlight-card h3 {
+    font-size: 23px;
+  }
+
+  .highlight-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .discover-link {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 22px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .about-strip {
+    padding: 45px 0;
+  }
+
+  .about-image {
+    height: 320px;
+  }
+
+  .about-copy h2 {
+    font-size: 31px;
+  }
+
+  .about-description {
+    font-size: 12px;
+  }
+
+  .highlight-card h3 {
+    font-size: 21px;
+  }
+}
