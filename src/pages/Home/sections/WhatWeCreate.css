@@ -1,1 +1,266 @@
-.what-create{background:var(--black)}.what-head{display:grid;grid-template-columns:1.4fr .8fr;gap:60px;align-items:end;margin-bottom:40px}.what-head>p{color:var(--gray);font-size:13px;padding-bottom:3px}.event-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.wc-card{height:430px;position:relative;overflow:hidden;border:1px solid rgba(201,162,77,.18)}.wc-card img{width:100%;height:100%;object-fit:cover;transition:1s}.wc-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.86));}.wc-content{position:absolute;left:22px;right:22px;bottom:20px;z-index:2}.wc-content h3{font-family:var(--display);font-size:26px;line-height:1;text-transform:uppercase;font-weight:500}.wc-content p{font-size:11px;color:#ccc;margin:8px 0 14px;line-height:1.6}.wc-content svg{color:var(--gold-soft);transition:.3s}.wc-card:hover img{transform:scale(1.08)}.wc-card:hover .wc-content svg{transform:translate(5px,-5px)}@media(max-width:1000px){.event-card-grid{grid-template-columns:1fr 1fr}.what-head{grid-template-columns:1fr}}@media(max-width:520px){.event-card-grid{grid-template-columns:1fr}.wc-card{height:360px}}
+/* =========================================================
+   WHAT WE CREATE
+========================================================= */
+
+.what-create {
+  background: var(--black);
+
+  /* TOP / BOTTOM SPACE REDUCED */
+  padding-top: 45px !important;
+  padding-bottom: 45px !important;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.what-head {
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.8fr;
+
+  gap: 40px;
+
+  align-items: end;
+
+  /* REDUCED */
+  margin-bottom: 25px;
+}
+
+.what-head > p {
+  color: var(--gray);
+
+  font-size: 13px;
+
+  padding-bottom: 3px;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   EVENT CARDS
+========================================================= */
+
+.event-card-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.wc-card {
+  height: 400px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(201, 162, 77, 0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.wc-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: 1s;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.wc-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(0, 0, 0, 0.86)
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.wc-content {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+
+  bottom: 20px;
+
+  z-index: 2;
+}
+
+.wc-content h3 {
+  font-family: var(--display);
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  font-weight: 500;
+
+  margin: 0;
+}
+
+.wc-content p {
+  font-size: 11px;
+
+  color: #ccc;
+
+  margin: 8px 0 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.wc-content svg {
+  color: var(--gold-soft);
+
+  transition: 0.3s;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.wc-card:hover img {
+  transform: scale(1.08);
+}
+
+.wc-card:hover .wc-content svg {
+  transform: translate(5px, -5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .what-create {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .event-card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .what-head {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+  }
+
+  .wc-card {
+    height: 380px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .what-create {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .what-head {
+    gap: 15px;
+
+    margin-bottom: 20px;
+  }
+
+  .what-head > p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+  .event-card-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .wc-card {
+    height: 340px;
+  }
+
+  .wc-content {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .wc-content h3 {
+    font-size: 23px;
+  }
+
+  .wc-content p {
+    font-size: 10px;
+
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .what-create {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .wc-card {
+    height: 320px;
+  }
+
+  .wc-content h3 {
+    font-size: 21px;
+  }
+}

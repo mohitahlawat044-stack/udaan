@@ -1,1 +1,898 @@
-.experiences{background:#0b0b0b}.experience-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:36px}.experience-grid{display:grid;grid-template-columns:1.3fr .7fr;grid-auto-rows:310px;gap:12px}.experience-card{position:relative;overflow:hidden}.experience-card.ec1{grid-row:span 2}.experience-card.ec4{grid-column:span 2}.experience-card img{width:100%;height:100%;object-fit:cover;transition:1s}.experience-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.84))}.experience-label{position:absolute;left:24px;right:24px;bottom:20px;z-index:2}.experience-label span{color:var(--gold);font-size:10px;letter-spacing:.12em}.experience-label h3{font-family:var(--display);font-size:28px;text-transform:uppercase;font-weight:500}.experience-label p{font-size:11px;color:#d1d1d1;max-width:390px}.experience-label svg{color:var(--gold-soft);margin-top:10px;transition:.3s}.experience-card:hover img{transform:scale(1.07)}.experience-card:hover .experience-label svg{transform:translate(5px,-5px)}@media(max-width:700px){.experience-intro{display:block}.experience-grid{grid-template-columns:1fr;grid-auto-rows:300px}.experience-card.ec1{grid-row:auto}.experience-card.ec4{grid-column:auto}}
+/* =========================================================
+   EXPERIENCES SECTION
+========================================================= */
+
+.experiences {
+  background: #11100e;
+  overflow: hidden;
+}
+
+.experiences.section {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.experience-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+
+.experience-intro .section-heading {
+  order: 1;
+  margin: 0;
+}
+
+
+/* OUR EVENT EXPERIENCES - RIGHT */
+
+.experience-intro-left {
+  order: 2;
+  margin-left: auto;
+
+  text-align: right;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.experience-intro-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.experience-line {
+  width: 42px;
+  height: 1px;
+
+  display: block;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   EXPERIENCE GRID
+   DESKTOP
+========================================================= */
+
+.experience-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  grid-auto-rows: 190px;
+
+  gap: 8px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.experience-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 190px;
+
+  overflow: hidden;
+
+  background: #181613;
+}
+
+
+/* =========================================================
+   RESET OLD GRID SPANS
+========================================================= */
+
+.experience-card.ec1 {
+  grid-row: auto;
+}
+
+.experience-card.ec4 {
+  grid-column: auto;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.experience-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.8s ease;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.02) 10%,
+      rgba(0, 0, 0, 0.25) 40%,
+      rgba(0, 0, 0, 0.90) 100%
+    );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.experience-label {
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+  bottom: 14px;
+
+  z-index: 2;
+}
+
+
+/* NUMBER */
+
+.experience-number {
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 9px;
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  margin-bottom: 5px;
+}
+
+
+/* TITLE */
+
+.experience-content h3 {
+  margin: 0;
+
+  color: var(--ivory);
+
+  font-family: var(--display);
+
+  font-size: 21px;
+
+  line-height: 1.05;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+}
+
+
+/* DESCRIPTION */
+
+.experience-content p {
+  max-width: 240px;
+
+  margin: 6px 0 0;
+
+  color: #d1d1d1;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   REMOVE CARD LINK / ARROW BUTTON
+========================================================= */
+
+.experience-arrow {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.experience-card:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   SLIDER CONTROLS
+   HIDDEN ON DESKTOP
+========================================================= */
+
+.experience-slider-controls {
+  display: none;
+}
+
+
+/* =========================================================
+   TABLET
+   701px - 1024px
+========================================================= */
+
+@media (min-width: 701px) and (max-width: 1024px) {
+
+  .experiences.section {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .experience-intro {
+    gap: 25px;
+    margin-bottom: 18px;
+  }
+
+
+  /* 2 x 2 */
+
+  .experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-auto-rows: 200px;
+
+    gap: 10px;
+  }
+
+
+  .experience-card {
+    height: 200px;
+  }
+
+
+  .experience-card.ec1 {
+    grid-row: auto;
+  }
+
+  .experience-card.ec4 {
+    grid-column: auto;
+  }
+
+
+  .experience-label {
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+  }
+
+
+  .experience-content h3 {
+    font-size: 23px;
+  }
+
+
+  .experience-content p {
+    max-width: 300px;
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   MAX 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .experiences {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .experiences.section {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+
+  /* =======================================================
+     INTRO
+  ======================================================= */
+
+  .experience-intro {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+
+    width: 100%;
+  }
+
+
+  /* HEADING */
+
+  .experience-intro .section-heading {
+    order: 1;
+
+    width: 100%;
+
+    margin: 0;
+
+    text-align: left !important;
+  }
+
+
+  /* EVENT EXPERIENCES */
+
+  .experience-intro-left {
+    order: 2;
+
+    width: 100%;
+
+    margin-left: 0;
+
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+
+  .experience-intro-label {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .experience-line {
+    width: 30px;
+  }
+
+
+  /* =======================================================
+     SLIDER WRAPPER
+  ======================================================= */
+
+  .experience-slider-wrap {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+
+  /* =======================================================
+     HORIZONTAL SLIDER
+  ======================================================= */
+
+  .experience-grid {
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    gap: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+  }
+
+
+  .experience-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* =======================================================
+     ONE COMPLETE CARD
+  ======================================================= */
+
+  .experience-card {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    min-width: 100%;
+
+    max-width: 100%;
+
+    height: 220px;
+
+    min-height: 220px;
+
+    scroll-snap-align: start;
+
+    scroll-snap-stop: always;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+
+  .experience-card.ec1 {
+    grid-row: auto;
+  }
+
+  .experience-card.ec4 {
+    grid-column: auto;
+  }
+
+
+  /* =======================================================
+     IMAGE
+  ======================================================= */
+
+  .experience-card img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+  }
+
+
+  /* =======================================================
+     OVERLAY
+  ======================================================= */
+
+  .experience-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.02) 10%,
+        rgba(0, 0, 0, 0.25) 40%,
+        rgba(0, 0, 0, 0.90) 100%
+      );
+  }
+
+
+  /* =======================================================
+     CARD CONTENT
+  ======================================================= */
+
+  .experience-label {
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 17px;
+
+    z-index: 5;
+  }
+
+
+  .experience-number {
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+  }
+
+
+  .experience-content h3 {
+
+    font-size: 23px;
+
+    line-height: 1.08;
+
+    text-align: left;
+  }
+
+
+  .experience-content p {
+
+    max-width: 280px;
+
+    margin-top: 6px;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    text-align: left;
+  }
+
+
+  /* =======================================================
+     MOBILE SLIDER BUTTONS
+     IMAGE KE UPAR
+  ======================================================= */
+
+  .experience-slider-controls {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 12px;
+
+    transform: translateX(-50%);
+
+    z-index: 50;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 0;
+  }
+
+
+  /* =======================================================
+     DOTS COMPLETELY HIDDEN
+  ======================================================= */
+
+  .experience-slider-dots {
+    display: none !important;
+  }
+
+
+  /* =======================================================
+     PREVIOUS / NEXT BUTTONS
+  ======================================================= */
+
+  .experience-slider-btn {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(201, 162, 77, 0.8);
+
+    background: rgba(5, 5, 5, 0.78);
+
+    color: var(--gold-soft);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  .experience-slider-btn:hover {
+
+    background: var(--gold);
+
+    color: var(--black);
+  }
+
+
+  .experience-slider-btn:active {
+
+    transform: scale(0.92);
+  }
+
+
+  /* =======================================================
+     CARD LINK ARROW REMOVE
+  ======================================================= */
+
+  .experience-arrow {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   MAX 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .experiences.section {
+
+    padding-top: 20px !important;
+
+    padding-bottom: 20px !important;
+  }
+
+
+  /* =======================================================
+     INTRO
+  ======================================================= */
+
+  .experience-intro {
+
+    gap: 11px;
+
+    margin-bottom: 16px;
+  }
+
+
+  .experience-intro .section-heading {
+
+    width: 100%;
+
+    text-align: left !important;
+
+    font-size: 30px;
+
+    line-height: 1.05;
+  }
+
+
+  .experience-intro-label {
+
+    justify-content: flex-start;
+
+    gap: 8px;
+  }
+
+
+  .experience-line {
+
+    width: 26px;
+  }
+
+
+  /* =======================================================
+     SLIDER
+  ======================================================= */
+
+  .experience-grid {
+
+    gap: 0;
+
+    padding: 0;
+
+    scroll-snap-type: x mandatory;
+  }
+
+
+  /* =======================================================
+     ONE FULL CARD
+  ======================================================= */
+
+  .experience-card {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    min-width: 100%;
+
+    max-width: 100%;
+
+    height: 215px;
+
+    min-height: 215px;
+  }
+
+
+  /* =======================================================
+     CONTENT
+  ======================================================= */
+
+  .experience-label {
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 16px;
+  }
+
+
+  .experience-number {
+
+    font-size: 8px;
+
+    margin-bottom: 4px;
+  }
+
+
+  .experience-content h3 {
+
+    font-size: 20px;
+
+    line-height: 1.08;
+  }
+
+
+  .experience-content p {
+
+    max-width: 250px;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    line-height: 1.45;
+  }
+
+
+  /* =======================================================
+     BUTTONS
+  ======================================================= */
+
+  .experience-slider-controls {
+
+    left: 50%;
+
+    bottom: 10px;
+
+    gap: 9px;
+  }
+
+
+  .experience-slider-btn {
+
+    width: 36px;
+
+    height: 36px;
+  }
+
+
+  /* CARD ARROW REMOVED */
+
+  .experience-arrow {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   MAX 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .experiences.section {
+
+    padding-top: 18px !important;
+
+    padding-bottom: 18px !important;
+  }
+
+
+  .experience-intro .section-heading {
+
+    font-size: 27px;
+
+    line-height: 1.05;
+  }
+
+
+  /* =======================================================
+     FULL WIDTH CARD
+  ======================================================= */
+
+  .experience-grid {
+
+    gap: 0;
+  }
+
+
+  .experience-card {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+
+    min-width: 100%;
+
+    max-width: 100%;
+
+    height: 205px;
+
+    min-height: 205px;
+  }
+
+
+  .experience-content h3 {
+
+    font-size: 18px;
+  }
+
+
+  .experience-content p {
+
+    font-size: 8.5px;
+  }
+
+
+  /* =======================================================
+     MOBILE BUTTONS
+  ======================================================= */
+
+  .experience-slider-controls {
+
+    bottom: 9px;
+
+    gap: 8px;
+  }
+
+
+  .experience-slider-btn {
+
+    width: 34px;
+
+    height: 34px;
+  }
+
+
+  .experience-arrow {
+    display: none !important;
+  }
+}

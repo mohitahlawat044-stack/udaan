@@ -1,1 +1,229 @@
-.approach{background:var(--black)}.approach-head{margin-bottom:45px}.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.approach-grid article{padding:28px 24px;min-height:230px;border-right:1px solid rgba(255,255,255,.09)}.approach-grid article:last-child{border-right:0}.approach-grid article>span{color:var(--gold);font-size:10px}.approach-grid h3{font-family:var(--display);font-size:32px;font-weight:500;margin:55px 0 6px}.approach-grid p{font-size:12px}@media(max-width:650px){.approach-grid{grid-template-columns:1fr}.approach-grid article{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}}
+/* =========================================================
+   APPROACH SECTION
+========================================================= */
+
+.approach {
+  background: #f1e9dc;
+  color: #171411;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.approach-head {
+  margin-bottom: 35px;
+}
+
+.approach-head .section-heading {
+  color: #171411;
+}
+
+
+/* Gold text */
+.approach-head .gold,
+.approach-head em {
+  color: #b18432;
+}
+
+
+/* =========================================================
+   APPROACH GRID
+========================================================= */
+
+.approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(120, 90, 40, 0.25);
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.approach-grid article {
+  padding: 28px 24px;
+
+  min-height: 230px;
+
+  border-right: 1px solid rgba(120, 90, 40, 0.20);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.approach-grid article:last-child {
+  border-right: 0;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.approach-grid article > span {
+  color: #b18432;
+
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.approach-grid h3 {
+  font-family: var(--display);
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  color: #171411;
+
+  margin: 55px 0 6px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.approach-grid p {
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: #625b52;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.approach-grid article:hover {
+  background: rgba(255, 255, 255, 0.35);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .approach-head {
+    margin-bottom: 30px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .approach-grid article {
+    min-height: 210px;
+
+    padding: 25px 20px;
+
+    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
+  }
+
+  .approach-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .approach-grid article:nth-child(3) {
+    grid-column: 1 / -1;
+
+    border-right: 0;
+
+    border-bottom: 0;
+  }
+
+  .approach-grid h3 {
+    font-size: 28px;
+
+    margin-top: 45px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .approach-head {
+    margin-bottom: 25px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid article {
+    min-height: auto;
+
+    padding: 24px 20px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
+  }
+
+  .approach-grid article:nth-child(2),
+  .approach-grid article:nth-child(3) {
+    border-right: 0;
+
+    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
+  }
+
+  .approach-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .approach-grid h3 {
+    font-size: 25px;
+
+    margin: 35px 0 8px;
+  }
+
+  .approach-grid p {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .approach-grid article {
+    padding: 22px 16px;
+  }
+
+  .approach-grid h3 {
+    font-size: 23px;
+
+    margin-top: 30px;
+  }
+}

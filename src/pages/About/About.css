@@ -1,1 +1,112 @@
-.about-page{background:var(--black)}.about-page section:not(.page-intro):not(.cta-section){position:relative}.editorial{padding:110px 0}.about-page p{font-size:13px;color:var(--gray)}
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-page {
+  background: #f1e9dc;
+  color: #171411;
+}
+
+.about-page section:not(.page-intro):not(.cta-section) {
+  position: relative;
+}
+
+
+/* =========================================================
+   EDITORIAL SECTION
+========================================================= */
+
+.editorial {
+  padding: 55px 0;
+  background: #f1e9dc;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.about-page p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #625b52;
+}
+
+
+/* Main heading */
+.about-page .section-heading {
+  color: #171411;
+}
+
+
+/* Gold text inside heading */
+.about-page .section-heading .gold,
+.about-page .section-heading em {
+  color: #b18432;
+}
+
+
+/* Eyebrow */
+.about-page .eyebrow {
+  color: #b18432;
+}
+
+
+/* =========================================================
+   EDITORIAL IMAGE
+========================================================= */
+
+.editorial img {
+  display: block;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .editorial {
+    padding: 45px 0;
+  }
+
+  .about-page p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .editorial {
+    padding: 35px 0;
+  }
+
+  .about-page p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .editorial {
+    padding: 28px 0;
+  }
+
+  .about-page p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}

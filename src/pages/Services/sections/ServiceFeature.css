@@ -1,1 +1,198 @@
-.service-feature{background:var(--black)}.service-feature.reverse{background:#0b0b0b}.service-feature-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}.service-feature.reverse .service-feature-grid{grid-template-columns:.9fr 1.1fr}.service-feature.reverse .service-feature-image{order:2}.service-feature-image{height:560px;overflow:hidden}.service-feature-image img{width:100%;height:100%;object-fit:cover;transition:.8s}.service-feature-image:hover img{transform:scale(1.04)}.service-feature-copy p{margin:22px 0;color:var(--gray);font-size:13px;max-width:560px}.service-feature-copy ul{list-style:none;border-top:1px solid var(--line);margin-top:28px}.service-feature-copy li{display:grid;grid-template-columns:35px 1fr auto;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.service-feature-copy li span{color:var(--gold);font-size:9px}.service-feature-copy li svg{color:var(--gold-soft)}@media(max-width:800px){.service-feature-grid,.service-feature.reverse .service-feature-grid{grid-template-columns:1fr;gap:35px}.service-feature.reverse .service-feature-image{order:0}.service-feature-image{height:400px}}
+/* =========================================
+   SERVICE FEATURE
+========================================= */
+
+.service-feature {
+  background: var(--black);
+}
+
+.service-feature.reverse {
+  background: #0b0b0b;
+}
+
+.service-feature-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.service-feature.reverse .service-feature-grid {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.service-feature.reverse .service-feature-image {
+  order: 2;
+}
+
+.service-feature-image {
+  height: 560px;
+  overflow: hidden;
+}
+
+.service-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s;
+}
+
+.service-feature-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.service-feature-copy p {
+  margin: 22px 0;
+  color: var(--gray);
+  font-size: 13px;
+  max-width: 560px;
+}
+
+.service-feature-copy ul {
+  list-style: none;
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding: 0;
+}
+
+.service-feature-copy li {
+  display: grid;
+  grid-template-columns: 35px 1fr auto;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.service-feature-copy li span {
+  color: var(--gold);
+  font-size: 9px;
+}
+
+.service-feature-copy li svg {
+  color: var(--gold-soft);
+}
+
+
+/* =========================================
+   CORPORATE EVENTS - CREAM SECTION
+========================================= */
+
+.service-feature.corporate-cream {
+  background: #f1e9dc;
+  color: #171411;
+}
+
+.service-feature.corporate-cream .section-heading {
+  color: #171411;
+}
+
+.service-feature.corporate-cream .service-feature-copy p {
+  color: #625b52;
+}
+
+.service-feature.corporate-cream .eyebrow {
+  color: #b18432;
+}
+
+.service-feature.corporate-cream .service-feature-copy ul {
+  border-top-color: rgba(120, 90, 40, 0.25);
+}
+
+.service-feature.corporate-cream .service-feature-copy li {
+  color: #171411;
+  border-bottom-color: rgba(120, 90, 40, 0.18);
+}
+
+.service-feature.corporate-cream .service-feature-copy li span {
+  color: #b18432;
+}
+
+.service-feature.corporate-cream .service-feature-copy li svg {
+  color: #b18432;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .service-feature-grid {
+    gap: 50px;
+  }
+
+  .service-feature-image {
+    height: 480px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .service-feature-grid,
+  .service-feature.reverse .service-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .service-feature.reverse .service-feature-image {
+    order: 0;
+  }
+
+  .service-feature-image {
+    height: 400px;
+  }
+
+  .service-feature-copy p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .service-feature-grid,
+  .service-feature.reverse .service-feature-grid {
+    gap: 25px;
+  }
+
+  .service-feature-image {
+    height: 320px;
+  }
+
+  .service-feature-copy p {
+    margin: 16px 0;
+    font-size: 12px;
+  }
+
+  .service-feature-copy ul {
+    margin-top: 22px;
+  }
+
+  .service-feature-copy li {
+    grid-template-columns: 30px 1fr auto;
+    padding: 12px 0;
+    font-size: 10px;
+  }
+
+}

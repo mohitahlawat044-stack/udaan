@@ -5,7 +5,6 @@ import {
   Facebook,
   Mail,
   Phone,
-  ArrowUpRight,
   Plus,
   X
 } from 'lucide-react';
@@ -26,38 +25,12 @@ export default function Footer() {
   return (
     <footer className="footer">
 
-      {/* ================= CTA ================= */}
-      <section className="footer-cta">
-        <div className="container footer-cta-inner">
-
-          <div>
-            <span className="eyebrow">
-              START SOMETHING SPECIAL
-            </span>
-
-            <h2 className="section-heading">
-              LET'S TURN YOUR VISION
-              <br />
-              INTO AN <em>EXPERIENCE.</em>
-            </h2>
-          </div>
-
-          <Link
-            to="/contact"
-            className="round-link"
-            aria-label="Contact Udaan Events"
-          >
-            <ArrowUpRight size={24} />
-          </Link>
-
-        </div>
-      </section>
-
-
       {/* ================= FOOTER MAIN ================= */}
+
       <div className="footer-main container">
 
-        {/* BRAND */}
+        {/* ================= BRAND ================= */}
+
         <div className="footer-brand">
 
           <img
@@ -92,13 +65,16 @@ export default function Footer() {
 
 
         {/* ================= EXPLORE ================= */}
+
         <div className="footer-column">
 
           <button
+            type="button"
             className="footer-accordion-header"
             onClick={() => toggleSection('explore')}
             aria-expanded={openSection === 'explore'}
           >
+
             <h3>Explore</h3>
 
             <span className="accordion-icon">
@@ -108,13 +84,16 @@ export default function Footer() {
                 <Plus size={18} />
               )}
             </span>
+
           </button>
+
 
           <div
             className={`footer-accordion-content ${
               openSection === 'explore' ? 'open' : ''
             }`}
           >
+
             <nav>
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
@@ -122,19 +101,23 @@ export default function Footer() {
               <Link to="/events">Events</Link>
               <Link to="/contact">Contact</Link>
             </nav>
+
           </div>
 
         </div>
 
 
         {/* ================= SERVICES ================= */}
+
         <div className="footer-column">
 
           <button
+            type="button"
             className="footer-accordion-header"
             onClick={() => toggleSection('services')}
             aria-expanded={openSection === 'services'}
           >
+
             <h3>Services</h3>
 
             <span className="accordion-icon">
@@ -144,13 +127,16 @@ export default function Footer() {
                 <Plus size={18} />
               )}
             </span>
+
           </button>
+
 
           <div
             className={`footer-accordion-content ${
               openSection === 'services' ? 'open' : ''
             }`}
           >
+
             <nav>
               <Link to="/services">Weddings</Link>
               <Link to="/services">Corporate Events</Link>
@@ -158,19 +144,23 @@ export default function Footer() {
               <Link to="/services">Public Events</Link>
               <Link to="/services">Event Production</Link>
             </nav>
+
           </div>
 
         </div>
 
 
         {/* ================= CONNECT ================= */}
+
         <div className="footer-column">
 
           <button
+            type="button"
             className="footer-accordion-header"
             onClick={() => toggleSection('connect')}
             aria-expanded={openSection === 'connect'}
           >
+
             <h3>Connect</h3>
 
             <span className="accordion-icon">
@@ -180,14 +170,16 @@ export default function Footer() {
                 <Plus size={18} />
               )}
             </span>
+
           </button>
+
 
           <div
             className={`footer-accordion-content ${
               openSection === 'connect' ? 'open' : ''
-            }`
-            }
+            }`}
           >
+
             <div className="footer-contact">
 
               <span>
@@ -201,6 +193,7 @@ export default function Footer() {
               </span>
 
             </div>
+
           </div>
 
         </div>
@@ -209,6 +202,7 @@ export default function Footer() {
 
 
       {/* ================= FOOTER BOTTOM ================= */}
+
       <div className="footer-bottom container">
 
         <span>

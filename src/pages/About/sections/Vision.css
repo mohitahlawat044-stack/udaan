@@ -1,1 +1,286 @@
-.vision{background:#0b0b0b}.vision-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center}.vision-image{height:500px}.vision-image img{width:100%;height:100%;object-fit:cover}.vision-copy p{margin-top:18px;max-width:520px}.vision-note{border-top:1px solid var(--line);margin-top:35px;padding-top:15px;display:grid;gap:5px}.vision-note span{font-size:9px;letter-spacing:.18em;color:var(--gold)}.vision-note strong{font-family:var(--display);font-size:25px;font-weight:500}@media(max-width:800px){.vision-grid{grid-template-columns:1fr;gap:38px}.vision-image{height:400px}}
+/* =========================================================
+   VISION SECTION
+========================================================= */
+
+.vision {
+  background: #0b0b0b;
+  color: var(--ivory);
+
+  /* section ko compact rakhta hai */
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+
+/* =========================================================
+   VISION GRID
+========================================================= */
+
+.vision-grid {
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.vision-image {
+  height: 480px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.vision-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.vision-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   VISION CONTENT
+========================================================= */
+
+.vision-copy {
+  padding-right: 10px;
+}
+
+
+/* Eyebrow */
+.vision-copy .eyebrow {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* Main heading */
+.vision-copy .section-heading {
+  color: var(--ivory);
+
+  margin-top: 12px;
+
+  line-height: 1.05;
+}
+
+
+/* Gold heading text */
+.vision-copy .gold,
+.vision-copy em {
+  color: var(--gold-soft);
+}
+
+
+/* Paragraph */
+.vision-copy p {
+  margin-top: 20px;
+
+  max-width: 520px;
+
+  color: #b8b1a7;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   SECOND PARAGRAPH
+========================================================= */
+
+.vision-copy p + p {
+  margin-top: 16px;
+}
+
+
+/* =========================================================
+   VISION NOTE
+========================================================= */
+
+.vision-note {
+  border-top: 1px solid rgba(201, 162, 77, 0.28);
+
+  margin-top: 30px;
+
+  padding-top: 16px;
+
+  display: grid;
+
+  gap: 7px;
+}
+
+
+/* Small gold label */
+.vision-note span {
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--gold);
+}
+
+
+/* Note heading */
+.vision-note strong {
+  font-family: var(--display);
+
+  font-size: 27px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  color: var(--ivory);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .vision {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+  }
+
+  .vision-image {
+    height: 400px;
+  }
+
+  .vision-copy {
+    padding-right: 0;
+  }
+
+  .vision-copy p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .vision-note {
+    margin-top: 25px;
+  }
+
+  .vision-note strong {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .vision {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .vision-image {
+    height: 350px;
+  }
+
+  .vision-copy {
+    padding: 0;
+  }
+
+  .vision-copy .section-heading {
+    margin-top: 10px;
+  }
+
+  .vision-copy p {
+    margin-top: 16px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .vision-note {
+    margin-top: 25px;
+
+    padding-top: 14px;
+  }
+
+  .vision-note strong {
+    font-size: 24px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .vision {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .vision-grid {
+    gap: 25px;
+  }
+
+  .vision-image {
+    height: 300px;
+  }
+
+  .vision-copy .section-heading {
+    font-size: 30px;
+
+    line-height: 1.05;
+  }
+
+  .vision-copy p {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+  .vision-note {
+    margin-top: 22px;
+  }
+
+  .vision-note strong {
+    font-size: 21px;
+  }
+}

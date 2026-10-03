@@ -1,1 +1,89 @@
-.services-page{background:var(--black)}.services-page .gold{color:var(--gold-soft)}
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-page {
+  background: var(--black);
+}
+
+.services-page .gold {
+  color: var(--gold-soft);
+}
+
+
+/* =========================================
+   REDUCE SERVICE SECTION SPACING
+========================================= */
+
+.services-page .service-feature.section {
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+
+/* =========================================
+   SERVICE OVERVIEW
+========================================= */
+
+.services-page .service-overview.section {
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+
+/* =========================================
+   PRODUCTION SECTION
+========================================= */
+
+.services-page .production.section {
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .services-page .service-feature.section,
+  .services-page .service-overview.section,
+  .services-page .production.section {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .services-page .service-feature.section,
+  .services-page .service-overview.section,
+  .services-page .production.section {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .services-page .service-feature.section,
+  .services-page .service-overview.section,
+  .services-page .production.section {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+}

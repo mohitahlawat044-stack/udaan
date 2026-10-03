@@ -1,1 +1,238 @@
-.founders{background:var(--black)}.founders-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}.founders-image{height:500px}.founders-image img{width:100%;height:100%;object-fit:cover}.founders-copy p{margin-top:18px;max-width:550px}.founders-copy strong{color:var(--ivory)}.founder-names{margin-top:35px;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:center;gap:15px;font-size:10px;letter-spacing:.13em}.founder-names b{font-family:var(--display);font-size:25px;color:var(--gold);font-weight:400}@media(max-width:800px){.founders-grid{grid-template-columns:1fr;gap:38px}.founders-image{height:390px}}
+/* =========================================
+   FOUNDERS SECTION
+========================================= */
+
+.founders {
+  background: var(--black);
+
+  /* Upar-niche extra space kam */
+  padding-top: 65px !important;
+  padding-bottom: 65px !important;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+  align-items: center;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.founders-image {
+  height: 470px;
+  overflow: hidden;
+}
+
+.founders-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.founders-image:hover img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.founders-copy {
+  max-width: 680px;
+}
+
+.founders-copy .eyebrow {
+  color: var(--gold);
+}
+
+.founders-copy .section-heading {
+  margin-top: 12px;
+}
+
+.founders-copy .gold {
+  color: var(--gold-soft);
+}
+
+
+/* =========================================
+   PARAGRAPHS
+========================================= */
+
+.founders-copy p {
+  margin-top: 18px;
+  max-width: 580px;
+
+  color: #9f9a91;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.founders-copy strong {
+  color: var(--ivory);
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FOUNDER NAMES
+========================================= */
+
+.founder-names {
+  margin-top: 28px;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(201, 162, 77, 0.25);
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  color: var(--ivory);
+
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.founder-names b {
+  font-family: var(--display);
+  font-size: 24px;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .founders {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .founders-image {
+    height: 400px;
+  }
+
+  .founders-copy p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .founder-names {
+    gap: 13px;
+  }
+
+  .founder-names {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .founders {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .founders-image {
+    height: 350px;
+  }
+
+  .founders-copy {
+    max-width: 100%;
+  }
+
+  .founders-copy .section-heading {
+    font-size: 34px;
+    line-height: 1.05;
+  }
+
+  .founders-copy p {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .founder-names {
+    margin-top: 24px;
+    padding-top: 16px;
+    gap: 12px;
+
+    flex-wrap: wrap;
+  }
+
+  .founder-names b {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .founders {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .founders-grid {
+    gap: 24px;
+  }
+
+  .founders-image {
+    height: 300px;
+  }
+
+  .founders-copy .section-heading {
+    font-size: 29px;
+    line-height: 1.05;
+  }
+
+  .founders-copy p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .founder-names {
+    margin-top: 20px;
+    gap: 10px;
+    font-size: 8px;
+  }
+
+  .founder-names b {
+    font-size: 20px;
+  }
+}

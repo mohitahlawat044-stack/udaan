@@ -1,1 +1,227 @@
-.difference{background:#0b0b0b}.difference-head{max-width:700px}.difference-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,162,77,.18);margin-top:45px}.difference-grid article{background:#0b0b0b;padding:30px 24px;min-height:220px;transition:.35s}.difference-grid article:hover{background:#111}.difference-grid svg{color:var(--gold-soft);margin-bottom:55px}.difference-grid h3{font-family:var(--display);font-size:22px;font-weight:500;text-transform:uppercase}.difference-grid p{font-size:11px;margin-top:7px}@media(max-width:850px){.difference-grid{grid-template-columns:1fr 1fr}}@media(max-width:500px){.difference-grid{grid-template-columns:1fr}}
+/* =========================================================
+   DIFFERENCE SECTION
+========================================================= */
+
+.difference {
+  background: #0b0b0b;
+  color: var(--ivory);
+
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.difference-head {
+  max-width: 700px;
+}
+
+.difference-head .section-heading {
+  color: var(--ivory);
+}
+
+
+/* Gold heading text */
+.difference-head .gold,
+.difference-head em {
+  color: var(--gold-soft);
+}
+
+
+/* Eyebrow */
+.difference-head .eyebrow {
+  color: var(--gold);
+}
+
+
+/* =========================================================
+   DIFFERENCE GRID
+========================================================= */
+
+.difference-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: rgba(201, 162, 77, 0.22);
+
+  margin-top: 35px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.difference-grid article {
+  background: #0b0b0b;
+
+  padding: 28px 24px;
+
+  min-height: 220px;
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.difference-grid svg {
+  color: var(--gold-soft);
+
+  margin-bottom: 45px;
+
+  width: 25px;
+  height: 25px;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.difference-grid h3 {
+  font-family: var(--display);
+
+  font-size: 22px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  color: var(--ivory);
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.difference-grid p {
+  font-size: 11px;
+
+  line-height: 1.65;
+
+  color: #b8b1a7;
+
+  margin-top: 8px;
+
+  max-width: 260px;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.difference-grid article:hover {
+  background: #111;
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .difference {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  .difference-grid {
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 30px;
+  }
+
+  .difference-grid article {
+    min-height: 210px;
+
+    padding: 25px 20px;
+  }
+
+  .difference-grid svg {
+    margin-bottom: 38px;
+  }
+
+  .difference-grid h3 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .difference {
+    padding-top: 35px !important;
+    padding-bottom: 35px !important;
+  }
+
+  .difference-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 25px;
+  }
+
+  .difference-grid article {
+    min-height: auto;
+
+    padding: 24px 20px;
+  }
+
+  .difference-grid svg {
+    margin-bottom: 28px;
+  }
+
+  .difference-grid h3 {
+    font-size: 21px;
+  }
+
+  .difference-grid p {
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .difference {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .difference-grid article {
+    padding: 22px 17px;
+  }
+
+  .difference-grid h3 {
+    font-size: 20px;
+  }
+}
