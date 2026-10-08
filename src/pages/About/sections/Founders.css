@@ -1,238 +1,301 @@
-/* =========================================
+/* =========================================================
    FOUNDERS SECTION
-========================================= */
+========================================================= */
 
 .founders {
-  background: var(--black);
-
-  /* Upar-niche extra space kam */
-  padding-top: 65px !important;
-  padding-bottom: 65px !important;
+  background: #0b0b0b;
+  color: var(--ivory);
+  overflow: hidden;
 }
 
 
-/* =========================================
-   GRID
-========================================= */
+/* =========================================================
+   MAIN GRID
+========================================================= */
 
 .founders-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 70px;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 72px;
+
   align-items: center;
 }
 
 
-/* =========================================
+/* =========================================================
    IMAGE
-========================================= */
+========================================================= */
 
 .founders-image {
-  height: 470px;
+  position: relative;
+
+  height: 500px;
+
   overflow: hidden;
+
+  border-radius: 2px;
+
+  background: #111;
 }
+
+
+/* Image */
 
 .founders-image img {
   width: 100%;
   height: 100%;
+
   display: block;
+
   object-fit: cover;
+
   transition: transform 0.8s ease;
 }
 
+
 .founders-image:hover img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 
-/* =========================================
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.founders-image::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 1px solid rgba(216, 184, 102, 0.35);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
    CONTENT
-========================================= */
+========================================================= */
 
 .founders-copy {
-  max-width: 680px;
+  max-width: 620px;
 }
 
-.founders-copy .eyebrow {
-  color: var(--gold);
-}
+
+/* Heading */
 
 .founders-copy .section-heading {
-  margin-top: 12px;
+  margin-top: 15px;
+
+  color: #f8f5ed;
+
+  font-size: 45px;
+
+  line-height: 0.98;
+
+  letter-spacing: 0.01em;
 }
+
+
+/* Gold */
 
 .founders-copy .gold {
   color: var(--gold-soft);
 }
 
 
-/* =========================================
-   PARAGRAPHS
-========================================= */
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .founders-copy p {
-  margin-top: 18px;
-  max-width: 580px;
+  max-width: 600px;
 
-  color: #9f9a91;
-  font-size: 13px;
-  line-height: 1.7;
+  margin-top: 18px;
+
+  color: #aaa49b;
+
+  font-size: 12px;
+
+  line-height: 1.8;
 }
 
+
+/* First paragraph */
+
+.founders-copy p:first-of-type {
+  margin-top: 28px;
+
+  color: #c9c3ba;
+
+  font-size: 13px;
+}
+
+
+/* Strong names */
+
 .founders-copy strong {
-  color: var(--ivory);
+  color: #f8f5ed;
+
   font-weight: 600;
 }
 
 
-/* =========================================
+/* =========================================================
+   GOLD DIVIDER
+========================================================= */
+
+.founders-copy::before {
+  content: '';
+
+  display: block;
+
+  width: 60px;
+
+  height: 1px;
+
+  margin-top: 25px;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
    FOUNDER NAMES
-========================================= */
+========================================================= */
 
 .founder-names {
-  margin-top: 28px;
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 32px;
+
   padding-top: 18px;
 
-  border-top: 1px solid rgba(201, 162, 77, 0.25);
-
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  color: var(--ivory);
-
-  font-size: 10px;
-  letter-spacing: 0.14em;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
+
+
+/* Names */
+
+.founder-names > span {
+  color: #f4efe5;
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  font-weight: 600;
+}
+
+
+/* Ampersand */
 
 .founder-names b {
   font-family: var(--display);
-  font-size: 24px;
+
   color: var(--gold);
+
+  font-size: 27px;
+
   font-weight: 400;
+
+  line-height: 1;
 }
 
 
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
-  .founders {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
-  }
-
   .founders-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+
+    gap: 45px;
   }
 
   .founders-image {
-    height: 400px;
+    height: 430px;
   }
 
-  .founders-copy p {
-    font-size: 12px;
-    line-height: 1.65;
+  .founders-copy .section-heading {
+    font-size: 37px;
   }
 
-  .founder-names {
-    gap: 13px;
-  }
-
-  .founder-names {
-    font-size: 9px;
-  }
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 700px) {
 
-  .founders {
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
-  }
-
   .founders-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+
+    gap: 38px;
   }
 
   .founders-image {
-    height: 350px;
-  }
-
-  .founders-copy {
-    max-width: 100%;
+    height: 390px;
   }
 
   .founders-copy .section-heading {
     font-size: 34px;
-    line-height: 1.05;
   }
 
-  .founders-copy p {
-    margin-top: 15px;
-    font-size: 12px;
-    line-height: 1.65;
+  .founders-copy p:first-of-type {
+    margin-top: 22px;
   }
 
   .founder-names {
-    margin-top: 24px;
-    padding-top: 16px;
-    gap: 12px;
+    gap: 14px;
 
     flex-wrap: wrap;
   }
 
-  .founder-names b {
-    font-size: 22px;
-  }
 }
 
 
-/* =========================================
+/* =========================================================
    SMALL MOBILE
-========================================= */
+========================================================= */
 
-@media (max-width: 480px) {
-
-  .founders {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
-  }
-
-  .founders-grid {
-    gap: 24px;
-  }
+@media (max-width: 420px) {
 
   .founders-image {
-    height: 300px;
+    height: 340px;
   }
 
   .founders-copy .section-heading {
-    font-size: 29px;
-    line-height: 1.05;
+    font-size: 30px;
   }
 
-  .founders-copy p {
+  .founders-copy p,
+  .founders-copy p:first-of-type {
     font-size: 11px;
-    line-height: 1.6;
   }
 
   .founder-names {
-    margin-top: 20px;
     gap: 10px;
+  }
+
+  .founder-names > span {
     font-size: 8px;
   }
 
   .founder-names b {
-    font-size: 20px;
+    font-size: 23px;
   }
+
 }

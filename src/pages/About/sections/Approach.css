@@ -1,122 +1,259 @@
 /* =========================================================
-   APPROACH SECTION
+   APPROACH
 ========================================================= */
 
 .approach {
   background: #f1e9dc;
   color: #171411;
+  padding: 72px 0 78px;
+  overflow: hidden;
 }
 
 
 /* =========================================================
-   HEADING
+   HEADER
 ========================================================= */
 
 .approach-head {
-  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr 0.55fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 32px;
 }
 
 .approach-head .section-heading {
+  margin-top: 12px;
   color: #171411;
 }
 
-
-/* Gold text */
-.approach-head .gold,
-.approach-head em {
+.approach-head .gold {
   color: #b18432;
 }
 
 
 /* =========================================================
-   APPROACH GRID
+   INTRO
+========================================================= */
+
+.approach-intro {
+  max-width: 400px;
+  margin-left: auto;
+  padding-bottom: 4px;
+
+  color: #71695f;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   GRID
 ========================================================= */
 
 .approach-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
-  border-top: 1px solid rgba(120, 90, 40, 0.25);
+  gap: 12px;
 }
 
 
 /* =========================================================
-   CARDS
+   CARD
 ========================================================= */
 
-.approach-grid article {
-  padding: 28px 24px;
+.approach-card {
+  position: relative;
 
-  min-height: 230px;
+  height: 235px;
 
-  border-right: 1px solid rgba(120, 90, 40, 0.20);
+  padding: 20px 22px;
 
-  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.32);
+
+  border: 1px solid rgba(120, 90, 40, 0.20);
+
+  overflow: hidden;
 
   transition:
-    background 0.35s ease,
-    transform 0.35s ease;
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.approach-grid article:last-child {
-  border-right: 0;
+
+/* Top gold accent */
+
+.approach-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 42px;
+  height: 2px;
+
+  background: #b18432;
+
+  transition: width 0.3s ease;
+}
+
+
+/* Hover */
+
+.approach-card:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255, 255, 255, 0.65);
+
+  border-color: rgba(177, 132, 50, 0.38);
+
+  box-shadow:
+    0 14px 30px rgba(80, 55, 20, 0.08);
+}
+
+.approach-card:hover::before {
+  width: 70px;
 }
 
 
 /* =========================================================
-   NUMBER
+   TOP
 ========================================================= */
 
-.approach-grid article > span {
+.approach-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Number */
+
+.approach-number {
   color: #b18432;
 
   font-size: 10px;
 
   letter-spacing: 0.15em;
+
+  font-weight: 600;
+}
+
+
+/* Small line */
+
+.approach-small-line {
+  width: 30px;
+  height: 1px;
+
+  background: rgba(177, 132, 50, 0.45);
 }
 
 
 /* =========================================================
-   TITLE
+   CONTENT
 ========================================================= */
 
-.approach-grid h3 {
+.approach-content {
+  margin-top: auto;
+}
+
+
+.approach-content h3 {
+  margin: 0;
+
   font-family: var(--display);
 
-  font-size: 32px;
+  font-size: 28px;
+
+  line-height: 1;
 
   font-weight: 500;
 
-  color: #171411;
+  text-transform: uppercase;
 
-  margin: 55px 0 6px;
+  color: #171411;
 }
 
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
+.approach-content p {
+  max-width: 350px;
 
-.approach-grid p {
-  font-size: 12px;
-
-  line-height: 1.7;
+  margin-top: 10px;
 
   color: #625b52;
 
-  margin: 0;
+  font-size: 11px;
+
+  line-height: 1.6;
 }
 
 
 /* =========================================================
-   HOVER
+   BOTTOM
 ========================================================= */
 
-.approach-grid article:hover {
-  background: rgba(255, 255, 255, 0.35);
+.approach-bottom {
+  display: flex;
 
-  transform: translateY(-4px);
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 17px;
+}
+
+
+/* Line */
+
+.approach-line {
+  width: 50px;
+  height: 1px;
+
+  background: #b18432;
+
+  transition: width 0.3s ease;
+}
+
+.approach-card:hover .approach-line {
+  width: 70px;
+}
+
+
+/* Arrow */
+
+.approach-arrow {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(177, 132, 50, 0.55);
+
+  border-radius: 50%;
+
+  color: #b18432;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.approach-card:hover .approach-arrow {
+  background: #b18432;
+
+  color: #fff;
+
+  transform: translate(3px, -3px);
 }
 
 
@@ -126,38 +263,27 @@
 
 @media (max-width: 850px) {
 
+  .approach {
+    padding: 60px 0 65px;
+  }
+
   .approach-head {
-    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .approach-intro {
+    margin-left: 0;
+    max-width: 550px;
   }
 
   .approach-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .approach-grid article {
-    min-height: 210px;
-
-    padding: 25px 20px;
-
-    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
-  }
-
-  .approach-grid article:nth-child(2) {
-    border-right: 0;
-  }
-
-  .approach-grid article:nth-child(3) {
+  .approach-card:last-child {
     grid-column: 1 / -1;
-
-    border-right: 0;
-
-    border-bottom: 0;
-  }
-
-  .approach-grid h3 {
-    font-size: 28px;
-
-    margin-top: 45px;
   }
 }
 
@@ -166,7 +292,11 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+
+  .approach {
+    padding: 55px 0 60px;
+  }
 
   .approach-head {
     margin-bottom: 25px;
@@ -174,39 +304,28 @@
 
   .approach-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .approach-grid article {
-    min-height: auto;
+  .approach-card,
+  .approach-card:last-child {
+    grid-column: auto;
 
-    padding: 24px 20px;
+    height: 205px;
 
-    border-right: 0;
-
-    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
+    padding: 18px 19px;
   }
 
-  .approach-grid article:nth-child(2),
-  .approach-grid article:nth-child(3) {
-    border-right: 0;
-
-    border-bottom: 1px solid rgba(120, 90, 40, 0.20);
-  }
-
-  .approach-grid article:last-child {
-    border-bottom: 0;
-  }
-
-  .approach-grid h3 {
+  .approach-content h3 {
     font-size: 25px;
-
-    margin: 35px 0 8px;
   }
 
-  .approach-grid p {
+  .approach-content p {
     font-size: 11px;
+  }
 
-    line-height: 1.6;
+  .approach-bottom {
+    margin-top: 13px;
   }
 }
 
@@ -217,13 +336,17 @@
 
 @media (max-width: 400px) {
 
-  .approach-grid article {
-    padding: 22px 16px;
+  .approach {
+    padding: 48px 0 52px;
   }
 
-  .approach-grid h3 {
+  .approach-card,
+  .approach-card:last-child {
+    height: 195px;
+  }
+
+  .approach-content h3 {
     font-size: 23px;
-
-    margin-top: 30px;
   }
+
 }
